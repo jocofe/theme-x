@@ -1,0 +1,28 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.alwaysShowStatus": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.extensionOnImport": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/.git": true
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.bracketPairs": true,
+  "editor.tabSize": 2,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false
+}
