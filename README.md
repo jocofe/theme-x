@@ -1,40 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🧠 Headless Shopify – Next.js + TypeScript
 
-## Getting Started
+Este es un proyecto personal para construir una tienda **headless** con Shopify como backend y un frontend completamente custom usando **Next.js + React + TypeScript**. No se utiliza Hydrogen, Remix ni ningún framework adicional: el objetivo es **aprender desde cero** cómo conectar Shopify a un frontend desacoplado, con foco en rendimiento, escalabilidad y SEO.
 
-First, run the development server:
+---
+
+## 👨‍💻 ¿Por qué este proyecto?
+
+Trabajo como desarrollador frontend y UX/UI en **Onestic**, donde usamos temas Shopify personalizados basados en Dawn. Pero quería entender cómo construir **una tienda headless real**, desde cero, sin dependencias, para mejorar mis habilidades en:
+
+- Arquitectura headless
+- GraphQL y Storefront API
+- SEO y renderizado en servidor
+- Rutas dinámicas con Next.js
+- Estilos con CSS Modules y diseño escalable
+
+---
+
+## 🧱 ¿Qué estoy construyendo?
+
+Una tienda ecommerce desacoplada con:
+
+- Navegación pública: home, colecciones, productos
+- Datos en tiempo real desde Shopify Storefront API
+- Carrito de compra y redirección al checkout
+- Filtros, variantes y lógica de producto dinámica
+- Responsive, accesible y optimizada para SEO
+
+---
+
+## 🚀 Stack técnico
+
+- [Next.js](https://nextjs.org/) (con Pages Router)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [CSS Modules](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css)
+- [Shopify Storefront API](https://shopify.dev/docs/api/storefront)
+- [GraphQL](https://graphql.org/)
+
+---
+
+## 📁 Estructura inicial del proyecto
+
+``
+headless-shopify/
+├── public/ # Archivos estáticos
+├── src/
+│ ├── components/ # Componentes reutilizables
+│ ├── lib/ # Cliente Shopify y funciones de API
+│ ├── pages/ # Home, producto, colección, etc.
+│ ├── styles/ # CSS Modules
+│ └── types/ # Tipos TypeScript compartidos
+├── .env.local # Claves privadas (Storefront Token)
+├── next.config.js
+├── tsconfig.json
+└── package.json
+``
+
+
+---
+
+## 📍 Estado del proyecto
+
+✅ Proyecto Next.js + TS configurado  
+🔜 Conexión a Storefront API (en proceso)  
+🔜 Primera query a productos  
+🔜 Routing dinámico (`/products/[handle]`)  
+🔜 Carrito y lógica de checkout  
+
+---
+
+## 🛠️ Cómo ejecutarlo localmente
+
+1. Crea un archivo `.env.local` en la raíz con estas claves:
+
+``
+SHOPIFY_STORE_DOMAIN=your-store.myshopify.com
+SHOPIFY_STOREFRONT_TOKEN=your_storefront_token
+SHOPIFY_API_VERSION=2024-04
+``
+
+
+2. Instala dependencias y ejecuta el entorno:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
